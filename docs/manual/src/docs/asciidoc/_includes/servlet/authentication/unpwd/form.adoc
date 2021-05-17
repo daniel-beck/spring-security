@@ -58,7 +58,7 @@ image:{icondir}/number_4.png[] If authentication is successful, then __Success__
 If remember me is not configured, this is a no-op.
 // FIXME: link to rememberme
 * `ApplicationEventPublisher` publishes an `InteractiveAuthenticationSuccessEvent`.
-* The `AuthenticationSuccessHandler` is invoked. Typically this is a `SimpleUrlAuthenticationSuccessHandler` which will redirect to a request saved by <<servlet-exceptiontranslationfilter,`ExceptionTranslationFilter`>> when we redirect to the log in page.
+* The `AuthenticationSuccessHandler` is invoked. Typically this is a `SavedRequestAwareAuthenticationSuccessHandler` which will redirect to a request saved by <<servlet-exceptiontranslationfilter,`ExceptionTranslationFilter`>> when we redirect to the log in page.
 
 [[servlet-authentication-form-min]]
 Spring Security form log in is enabled by default.
